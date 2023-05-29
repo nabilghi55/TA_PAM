@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/elang" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/header_image"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Username"
+            android:background="@drawable/edit_text"/>
+
+        <EditText
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Email"
+            android:background="@drawable/edit_text"/>
+
+        <EditText
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:background="@drawable/edit_text"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:paddingStart="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_telepon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Nomor Telepon"
+            android:background="@drawable/edit_text"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dengan mendaftar, Anda menyetujui Syarat &amp; Ketentuan dan Kebijakan Privasi" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_daftar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"
+            android:text="Daftar" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="atau daftar dengan" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_google"
+            android:background="@drawable/button2_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Google" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sudah mempunyai akun?" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2_background"
+            android:text="Masuk" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

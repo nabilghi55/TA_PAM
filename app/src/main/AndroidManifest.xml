@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TA_PAM"
         tools:targetApi="31">
         <activity
+            android:name=".Daftar"
+            android:exported="false" />
+        <activity
             android:name=".AyoMulai"
             android:exported="false" />
         <activity
