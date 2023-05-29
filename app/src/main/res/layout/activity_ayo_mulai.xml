@@ -1,9 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ayo_mulai"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AyoMulai">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/bendera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bendera" />
+
+    <TextView
+        android:id="@+id/teks1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ayo Mulai!"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_200"
+        android:layout_below="@id/bendera"
+        android:layout_marginTop="150dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/teks2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teks1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Ayoo mulai sekarang untuk lebih mengenal pariwisata Indonesia. Gabung Sekarang!"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teks2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/daftar"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button2_background"
+            android:text="Daftar"
+            android:textColor="@color/blue_200"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/white" /> <!-- Warna latar belakang tombol -->
+            <stroke
+                android:width="2dp"
+                android:color="@color/blue_200" />
+            <corners android:radius="12dp" /> <!-- Radius sudut tombol -->
+        </shape>
+    </item>
+</layer-list>
