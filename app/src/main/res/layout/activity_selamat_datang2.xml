@@ -9,62 +9,59 @@
 
     <ImageView
         android:id="@+id/gambarselamatdatang2"
-        android:layout_width="111dp"
-        android:layout_height="84dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="27dp"
-        android:src="@drawable/selamatdatang2"
-        android:layout_centerHorizontal="true" />
+        android:layout_width="375dp"
+        android:layout_height="258dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/selamatdatang2" />
 
     <TextView
         android:id="@+id/tulisan1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/gambarselamatdatang2"
-        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
         android:gravity="center"
         android:text="Aplikasi pariwisata terbaik di Indonesia"
-        android:textSize="10dp"
+        android:textSize="24dp"
         android:textStyle="bold"
         android:textColor="@color/blue_200"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_centerHorizontal="true" />
+        android:paddingRight="16dp" />
 
     <TextView
         android:id="@+id/tulisan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tulisan1"
-        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="510dp"
         android:gravity="center"
         android:text="Jelajahi pulau-pulau eksotis, pantai yang memukau, pegunungan yang menakjubkan, dan kekayaan budaya yang mempesona."
-        android:textSize="5dp"
+        android:textSize="14dp"
         android:textColor="@color/black"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:layout_centerHorizontal="true" />
+        android:paddingRight="16dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tulisan2"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
 
         <ImageView
-            android:layout_width="283px"
-            android:layout_height="32px"
-            android:layout_marginTop="5dp"
+            android:layout_width="283dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
-            android:src="@drawable/elipsslider" />
+            android:src="@drawable/elipsslider"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonlanjut"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginEnd="200dp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+
             android:background="@drawable/buttonlanjut" />
 
     </LinearLayout>
