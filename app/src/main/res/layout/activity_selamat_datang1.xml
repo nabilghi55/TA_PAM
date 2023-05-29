@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selamatdatang2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Selamatdatang1">
+
+    <ImageView
+        android:id="@+id/gambarselamatdatang2"
+        android:layout_width="404dp"
+        android:layout_height="349.41dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/selamatdatang1" />
+
+    <TextView
+        android:id="@+id/tulisan1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:gravity="center"
+        android:text="Selamat datang di Antara!"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_200"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp" />
+
+    <TextView
+        android:id="@+id/tulisan2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="Kami dengan senang hati membantu Anda menjelajahi keindahan alam, budaya, dan keajaiban wisata di Indonesia."
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        tools:ignore="TextSizeCheck" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tulisan2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="283dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/elipsslider"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonlanjut"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/buttonlanjut" />
+
+    </LinearLayout>
+
+</RelativeLayout>
