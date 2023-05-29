@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "31074626934",
+    "project_id": "ta-pam-c6b4f",
+    "storage_bucket": "ta-pam-c6b4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:31074626934:android:00ea4f61d109ab63e31e57",
+        "android_client_info": {
+          "package_name": "com.example.ta_pam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo97On0oPvMl8AyDv2TIEUZV821jhIops"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
