@@ -27,5 +27,14 @@ public class AyoMulai extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btn_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AyoMulai.this,Login.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
 }
