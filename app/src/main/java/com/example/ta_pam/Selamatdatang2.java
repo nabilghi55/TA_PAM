@@ -22,9 +22,16 @@ public class Selamatdatang2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Selamatdatang2.this, AyoMulai.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
             }
+
         });
 
 
+
+    }
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 }

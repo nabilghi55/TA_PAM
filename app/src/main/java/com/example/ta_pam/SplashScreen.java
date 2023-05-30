@@ -1,18 +1,14 @@
 package com.example.ta_pam;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Window;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -25,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         ImageView gambar;
         gambar = findViewById(R.id.gambar1);
-        Animation slideAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in);
+        Animation slideAnimation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.slide_in_right);
         gambar.startAnimation(slideAnimation);
 
         slideAnimation.setAnimationListener(new Animation.AnimationListener() {

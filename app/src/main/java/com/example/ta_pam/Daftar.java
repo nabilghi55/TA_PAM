@@ -60,13 +60,19 @@ public class Daftar extends AppCompatActivity {
         email = inputEmail.getText().toString();
         username = inputUsername.getText().toString();
         password = inputPassword.getText().toString();
-
+        noTel = inputNoTel.getText().toString();
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                  .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Daftar.this, "Registrasi Berhasil", Toast.LENGTH_LONG).show();
+                             inputNoTel.getText().clear();
+                             inputPassword.getText().clear();
+                             inputEmail.getText().clear();
+                             inputUsername.getText().clear();
+                            Intent intent = new Intent(Daftar.this, Login.class);
+                            startActivity(intent);
                         } else {
                             Toast.makeText(Daftar.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();
                         }
