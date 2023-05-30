@@ -1,9 +1,13 @@
 package com.example.ta_pam;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,6 +23,7 @@ public class Daftar extends AppCompatActivity {
     String username, email, password, noTel;
     Button btn_daftar;
     FirebaseAuth mAuth;
+    TextView text_Masuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +35,18 @@ public class Daftar extends AppCompatActivity {
         inputPassword = findViewById(R.id.edit_password);
         inputNoTel = findViewById(R.id.edit_telepon);
         btn_daftar = findViewById(R.id.btn_daftar);
-
+        text_Masuk = findViewById(R.id.text_masuk);
         mAuth = FirebaseAuth.getInstance();
+
+        text_Masuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Daftar.this, Login.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         btn_daftar.setOnClickListener(new View.OnClickListener() {
             @Override

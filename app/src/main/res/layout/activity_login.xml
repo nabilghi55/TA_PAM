@@ -10,8 +10,8 @@
         android:layout_width="200dp"
         android:layout_height="173dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/elang" />
+        android:layout_marginTop="40dp"
+        android:src="@drawable/fotoorang" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,15 +23,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Masuk"
             android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="@color/black"/>
-
-
-
-
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,6 +67,28 @@
             android:textColor="@color/white"
             android:background="@drawable/button_background"
             android:text="Masuk" />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum Punya Akun?" />
+
+            <TextView
+                android:id="@+id/text_masuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Daftar"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/blue_200"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 </RelativeLayout>

@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +21,7 @@ public class Login extends AppCompatActivity {
     EditText inputEmail, inputPassword;
     Button btn_login;
     FirebaseAuth mAuth;
+    TextView text_login;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,16 +31,23 @@ public class Login extends AppCompatActivity {
 
         inputEmail = findViewById(R.id.login_email);
         inputPassword = findViewById(R.id.login_password);
-       btn_login = findViewById(R.id.btn_login);
-
+        btn_login = findViewById(R.id.btn_login);
+        text_login = findViewById(R.id.text_masuk);
         mAuth = FirebaseAuth.getInstance();
-
+        text_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, Daftar.class);
+                startActivity(intent);
+            }
+        });
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 login();
             }
         });
+
     }
 
     private void login() {
