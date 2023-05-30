@@ -21,7 +21,7 @@
         android:src="@drawable/bendera" />
 
     <TextView
-        android:fontFamily="@font/manrope"
+        android:fontFamily="@font/manropebold"
         android:id="@+id/teks1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_centerInParent="true" />
 
     <TextView
-        android:fontFamily="@font/manrope"
+        android:fontFamily="@font/manropebold"
         android:id="@+id/teks2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,6 +60,7 @@
             android:layout_height="60dp"
             android:background="@drawable/button2_background"
             android:text="Daftar"
+            android:fontFamily="@font/manropebold"
             android:textColor="@color/blue_200"
             />
 
@@ -69,6 +70,7 @@
             android:layout_height="60dp"
             android:background="@drawable/button_background"
             android:text="Login"
+            android:fontFamily="@font/manropebold"
             android:textColor="@color/white"
             android:layout_marginStart="10dp" />
 

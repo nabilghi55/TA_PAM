@@ -26,9 +26,11 @@
             android:text="Daftar"
             android:textSize="30dp"
             android:textStyle="bold"
+            android:fontFamily="@font/manropebold"
             android:textColor="@color/black"/>
 
         <TextView
+            android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Username"
@@ -41,10 +43,12 @@
             android:id="@+id/edit_username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="10dp"
             android:hint="Masukkan username"
             android:background="@drawable/edit_text"/>
 
         <TextView
+            android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email"
@@ -57,9 +61,11 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Masukkan email"
+            android:layout_marginTop="10dp"
             android:background="@drawable/edit_text"/>
 
         <TextView
+            android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Password"
@@ -67,6 +73,7 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:layout_marginTop="10dp"
             android:paddingStart="20dp"
             android:id="@+id/edit_password"
             android:layout_width="match_parent"
@@ -76,6 +83,7 @@
             android:inputType="textPassword" />
 
         <TextView
+            android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nomor Telepon"
@@ -83,6 +91,7 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:layout_marginTop="10dp"
             android:paddingStart="20dp"
             android:id="@+id/edit_telepon"
             android:layout_width="match_parent"
@@ -90,14 +99,18 @@
             android:hint="Masukkan nomor telepon"
             android:background="@drawable/edit_text"/>
 
-        <CheckBox
-            android:id="@+id/checkbox_agreement"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dengan mendaftar, Anda menyetujui Syarat &amp; Ketentuan dan Kebijakan Privasi" />
+<!--        <CheckBox-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:id="@+id/checkbox_agreement"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Dengan mendaftar, Anda menyetujui Syarat &amp; Ketentuan dan Kebijakan Privasi" />-->
 
         <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginTop="20dp"
             android:id="@+id/btn_daftar"
+            android:fontFamily="@font/manropebold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -114,11 +127,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:fontFamily="@font/manropebold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sudah mempunyai akun?" />
 
             <TextView
+                android:fontFamily="@font/manropebold"
                 android:id="@+id/text_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

@@ -16,6 +16,7 @@
         android:src="@drawable/selamatdatang2" />
 
     <TextView
+        android:fontFamily="@font/manropebold"
         android:id="@+id/tulisan1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +31,7 @@
         android:paddingRight="16dp" />
 
     <TextView
+        android:fontFamily="@font/manropebold"
         android:id="@+id/tulisan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

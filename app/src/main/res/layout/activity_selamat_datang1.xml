@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/selamatdatang2"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     tools:context=".Selamatdatang1">
 
@@ -16,6 +17,7 @@
         android:src="@drawable/selamatdatang1" />
 
     <TextView
+        android:fontFamily="@font/manropebold"
         android:id="@+id/tulisan1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,13 +25,14 @@
         android:layout_marginTop="400dp"
         android:gravity="center"
         android:text="Selamat datang di Antara!"
-        android:textSize="32dp"
+        android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="@color/blue_200"
         android:paddingLeft="16dp"
         android:paddingRight="16dp" />
 
     <TextView
+        android:fontFamily="@font/manropereg"
         android:id="@+id/tulisan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +58,7 @@
             android:layout_height="32dp"
             android:layout_marginTop="40dp"
             android:paddingLeft="10dp"
-            android:src="@drawable/elipsslider"/>
+            android:src="@drawable/slider1"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/buttonlanjut"

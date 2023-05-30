@@ -39,7 +39,7 @@ public class SplashScreen extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(SplashScreen.this, Selamatdatang2.class); // Ganti dengan Activity tujuan Anda
+                        Intent intent = new Intent(SplashScreen.this, Selamatdatang1.class); // Ganti dengan Activity tujuan Anda
                         startActivity(intent);
                         finish();
                     }
@@ -51,13 +51,5 @@ public class SplashScreen extends AppCompatActivity {
 
             }
         });
-//        final Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                startActivity(new Intent(getApplicationContext(), Selamatdatang2.class));
-//                finish();
-//            }
-//        }, 3000L); //3000 L = 3 detik
     }
 }

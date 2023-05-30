@@ -23,6 +23,9 @@
             android:name=".Selamatdatang2"
             android:exported="false" />
         <activity
+            android:name=".Selamatdatang1"
+            android:exported="false" />
+        <activity
             android:name=".Daftar"
             android:exported="false" />
         <activity

@@ -5,7 +5,11 @@
         android:fontWeight="500"
         android:font="@font/manrope" />
     <font
-        android:fontStyle="bold"
-        android:fontWeight="500"
-        android:font="@font/manrope" />
+        android:fontStyle="normal"
+        android:fontWeight="800"
+        android:font="@font/manropebold" />
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="800"
+        android:font="@font/manropereg" />
 </font-family>
