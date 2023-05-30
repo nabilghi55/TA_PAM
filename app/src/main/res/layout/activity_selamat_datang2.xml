@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/gambarselamatdatang2"
-        android:layout_width="375dp"
-        android:layout_height="258dp"
+        android:layout_width="325dp"
+        android:layout_height="225dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="90dp"
         android:src="@drawable/selamatdatang2" />
@@ -21,22 +21,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="400dp"
         android:gravity="center"
         android:text="Aplikasi pariwisata terbaik di Indonesia"
-        android:textSize="24dp"
+        android:textSize="28dp"
         android:textStyle="bold"
         android:textColor="@color/blue_200"
         android:paddingLeft="16dp"
         android:paddingRight="16dp" />
 
     <TextView
-        android:fontFamily="@font/manropebold"
+        android:fontFamily="@font/manropereg"
         android:id="@+id/tulisan2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="540dp"
+        android:layout_marginTop="500dp"
         android:gravity="center"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
