@@ -57,10 +57,11 @@ public class Daftar extends AppCompatActivity {
     }
 
     private void registrasi() {
+        email = inputEmail.getText().toString();
         username = inputUsername.getText().toString();
         password = inputPassword.getText().toString();
 
-        mAuth.createUserWithEmailAndPassword(username, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
