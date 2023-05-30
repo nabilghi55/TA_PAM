@@ -21,29 +21,30 @@
         android:src="@drawable/bendera" />
 
     <TextView
-        android:fontFamily="@font/manropebold"
         android:id="@+id/teks1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ayo Mulai!"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        android:textColor="@color/blue_200"
         android:layout_below="@id/bendera"
-        android:layout_marginTop="150dp"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/manropebold"
+        android:text="Ayo Mulai!"
+        android:textColor="@color/blue_200"
+        android:textSize="32dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:fontFamily="@font/manropebold"
+        android:fontFamily="@font/manropereg"
         android:id="@+id/teks2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/teks1"
         android:layout_centerInParent="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+        android:textColor="@color/black"
         android:text="Ayoo mulai sekarang untuk lebih mengenal pariwisata Indonesia. Gabung Sekarang!"
         android:textSize="16dp" />
 
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/teks2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp">
+        android:layout_marginTop="120dp">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/daftar"
