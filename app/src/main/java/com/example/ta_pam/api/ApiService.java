@@ -1,6 +1,7 @@
 package com.example.ta_pam.api;
 
-import com.example.ta_pam.ProvinsiResponse;
+import com.example.ta_pam.responses.ProvinsiResponse;
+import com.example.ta_pam.responses.kotaKabupatenResponse;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -20,6 +21,11 @@ public interface ApiService {
 
     @GET("daerahindonesia/provinsi")
     Call<ProvinsiResponse> getProvinsi();
+
+    @GET("daerahindonesia/kota?id_provinsi=32")
+    Call<kotaKabupatenResponse> getkotaKabupaten();
+
+
 }
 
 

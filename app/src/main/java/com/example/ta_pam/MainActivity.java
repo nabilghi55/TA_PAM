@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -15,10 +16,16 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.ta_pam.api.ApiClient;
+
+import com.example.ta_pam.adapters.ProvinsiAdapter;
+import com.example.ta_pam.adapters.KotaKabupatenAdapter;
 import com.example.ta_pam.api.ApiService;
 
-import com.example.ta_pam.ProvinsiResponse;
+import com.example.ta_pam.models.Provinsi;
+import com.example.ta_pam.models.kotaKabupatenModel;
+import com.example.ta_pam.responses.ProvinsiResponse;
+import com.example.ta_pam.responses.kotaKabupatenResponse;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -28,60 +35,108 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Provinsi> provinsiArrayList;
     private RecyclerView recyclerViewProvinsi;
     private ProvinsiAdapter provinsiAdapter;
+    private ArrayList<kotaKabupatenModel> kotaKabupatenArrayList;
+    private RecyclerView recyclerViewkotaKabupaten;
+    private KotaKabupatenAdapter KotaKabupatenAdapter;
 
+
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//
+//        provinsiArrayList = new ArrayList<>();
+//        recyclerViewProvinsi = findViewById(R.id.recyclerViewProvinsi);
+//        provinsiAdapter = new ProvinsiAdapter(provinsiArrayList);
+//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+//        recyclerViewProvinsi.setLayoutManager(layoutManager);
+//        recyclerViewProvinsi.setAdapter(provinsiAdapter);
+//        ApiService.service.getProvinsi().enqueue(new Callback<ProvinsiResponse>() {
+//            @Override
+//            public void onResponse(Call<ProvinsiResponse> call, Response<ProvinsiResponse> response) {
+//                if (response.isSuccessful()) {
+//                    ProvinsiResponse provinsiResponse = response.body();
+//                    if (provinsiResponse != null) {
+//                        List<Provinsi> provinsiList = provinsiResponse.getProvinsiList();
+//                        if (provinsiList != null) {
+//                            provinsiArrayList.addAll(provinsiList);
+//                            provinsiAdapter.notifyDataSetChanged();
+//                            Toast.makeText(MainActivity.this, "Datanya ada kok", Toast.LENGTH_SHORT).show();
+//
+//                        }
+//
+//                        else {
+//                            // Handle jika provinsiList bernilai null
+//                            Log.e(TAG, "onResponse: kosong"+response.body() );
+//                            Toast.makeText(MainActivity.this, "Provinsi List Null", Toast.LENGTH_SHORT).show();
+//
+//                        }
+//                    } else {
+//                        // Handle jika provinsiResponse bernilai null
+//                        Log.e(TAG, "onResponse: halo"+response.body() );
+//                        Toast.makeText(MainActivity.this, "Provinsi Response Null", Toast.LENGTH_SHORT).show();
+//
+//                    }
+//                } else {
+//                    // Tampilkan pesan error jika gagal mendapatkan respon dari API
+//                    Log.e(TAG, "onResponse: halo"+response.body() );
+//                    Toast.makeText(MainActivity.this, "Gagal respone api", Toast.LENGTH_SHORT).show();
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<ProvinsiResponse> call, Throwable t) {
+//                // Tampilkan pesan error jika terjadi kegagalan koneksi atau pemrosesan
+//            }
+//        });
+//    }
 
-        provinsiArrayList = new ArrayList<>();
-        recyclerViewProvinsi = findViewById(R.id.recyclerViewProvinsi);
-        provinsiAdapter = new ProvinsiAdapter(provinsiArrayList);
+        kotaKabupatenArrayList = new ArrayList<>();
+        recyclerViewkotaKabupaten = findViewById(R.id.recyclerViewkotaKabupaten);
+        KotaKabupatenAdapter = new KotaKabupatenAdapter(kotaKabupatenArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerViewProvinsi.setLayoutManager(layoutManager);
-        recyclerViewProvinsi.setAdapter(provinsiAdapter);
-        ApiService.service.getProvinsi().enqueue(new Callback<ProvinsiResponse>() {
+        recyclerViewkotaKabupaten.setLayoutManager(layoutManager);
+        recyclerViewkotaKabupaten.setAdapter(KotaKabupatenAdapter);
+
+          ApiService.service.getkotaKabupaten().enqueue(new Callback<kotaKabupatenResponse>() {
             @Override
-            public void onResponse(Call<ProvinsiResponse> call, Response<ProvinsiResponse> response) {
+            public void onResponse(Call<kotaKabupatenResponse> call, Response<kotaKabupatenResponse> response) {
                 if (response.isSuccessful()) {
-                    ProvinsiResponse provinsiResponse = response.body();
-                    if (provinsiResponse != null) {
-                        List<Provinsi> provinsiList = provinsiResponse.getProvinsiList();
-                        if (provinsiList != null) {
-                            provinsiArrayList.addAll(provinsiList);
-                            provinsiAdapter.notifyDataSetChanged();
+                    kotaKabupatenResponse kotaKabupatenResponse = response.body();
+                    if (kotaKabupatenResponse != null) {
+                        List<kotaKabupatenModel> kotaKabupatenList = kotaKabupatenResponse.getKotaKabupatenModelList();
+                        if (kotaKabupatenList != null) {
+                            kotaKabupatenArrayList.addAll(kotaKabupatenList);
+                            KotaKabupatenAdapter.notifyDataSetChanged();
                             Toast.makeText(MainActivity.this, "Datanya ada kok", Toast.LENGTH_SHORT).show();
-
-                        }
-
-                        else {
-                            // Handle jika provinsiList bernilai null
-                            Log.e(TAG, "onResponse: kosong"+response.body() );
-                            Toast.makeText(MainActivity.this, "Provinsi List Null", Toast.LENGTH_SHORT).show();
-
+                        } else {
+                            // Handle jika kotaKabupatenList bernilai null
+                            Log.e(TAG, "onResponse: kosong" + response.body());
+                            Toast.makeText(MainActivity.this, "Kota Kabupaten List Null", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        // Handle jika provinsiResponse bernilai null
-                        Log.e(TAG, "onResponse: halo"+response.body() );
-                        Toast.makeText(MainActivity.this, "Provinsi Response Null", Toast.LENGTH_SHORT).show();
-
+                        // Handle jika kotaKabupatenResponse bernilai null
+                        Log.e(TAG, "onResponse: halo" + response.body());
+                        Toast.makeText(MainActivity.this, "Kota Kabupaten Response Null", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     // Tampilkan pesan error jika gagal mendapatkan respon dari API
-                    Log.e(TAG, "onResponse: halo"+response.body() );
-                    Toast.makeText(MainActivity.this, "Gagal respone api", Toast.LENGTH_SHORT).show();
-
+                    Log.e(TAG, "onResponse: halo" + response.body());
+                    Toast.makeText(MainActivity.this, "Gagal response api", Toast.LENGTH_SHORT).show();
                 }
             }
 
-            @Override
-            public void onFailure(Call<ProvinsiResponse> call, Throwable t) {
-                // Tampilkan pesan error jika terjadi kegagalan koneksi atau pemrosesan
-            }
-        });
-    }
+              @Override
+              public void onFailure(Call<kotaKabupatenResponse> call, Throwable t) {
 
-    @Override
+              }
+          });
+    }
+        @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setTitle("Konfirmasi Logout")

@@ -1,4 +1,4 @@
-package com.example.ta_pam;
+package com.example.ta_pam.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.ta_pam.models.Provinsi;
+import com.example.ta_pam.R;
 
 import java.util.ArrayList;
 
