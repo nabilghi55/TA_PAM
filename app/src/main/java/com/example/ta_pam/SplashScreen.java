@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.ta_pam.auth.Selamatdatang1;
+
 public class SplashScreen extends AppCompatActivity {
 
     @Override
@@ -35,7 +37,7 @@ public class SplashScreen extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(SplashScreen.this, MainActivity.class); // Ganti dengan Activity tujuan Anda
+                        Intent intent = new Intent(SplashScreen.this, Selamatdatang1.class); // Ganti dengan Activity tujuan Anda
                         startActivity(intent);
                         finish();
                     }

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    tools:context=".Selamatdatang1">
+    tools:context=".auth.Selamatdatang1">
 
     <ImageView
         android:id="@+id/gambarselamatdatang2"

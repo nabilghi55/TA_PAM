@@ -20,19 +20,19 @@
             android:name=".SplashScreen"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".auth.Login"
             android:exported="false" />
         <activity
-            android:name=".Selamatdatang2"
+            android:name=".auth.Selamatdatang2"
             android:exported="false" />
         <activity
-            android:name=".Selamatdatang1"
+            android:name=".auth.Selamatdatang1"
             android:exported="false" />
         <activity
-            android:name=".Daftar"
+            android:name=".auth.Daftar"
             android:exported="false" />
         <activity
-            android:name=".AyoMulai"
+            android:name=".auth.AyoMulai"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

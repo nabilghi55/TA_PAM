@@ -1,4 +1,4 @@
-package com.example.ta_pam;
+package com.example.ta_pam.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.ta_pam.R;
 
 public class Selamatdatang1 extends AppCompatActivity {
     @Override

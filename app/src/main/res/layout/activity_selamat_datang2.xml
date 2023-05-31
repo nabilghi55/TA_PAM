@@ -5,7 +5,7 @@
     android:id="@+id/selamatdatang2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Selamatdatang2">
+    tools:context=".auth.Selamatdatang2">
 
     <ImageView
         android:id="@+id/gambarselamatdatang2"

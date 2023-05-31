@@ -21,9 +21,9 @@ import com.example.ta_pam.adapters.ProvinsiAdapter;
 import com.example.ta_pam.adapters.KotaKabupatenAdapter;
 import com.example.ta_pam.api.ApiService;
 
+import com.example.ta_pam.auth.Login;
 import com.example.ta_pam.models.Provinsi;
 import com.example.ta_pam.models.kotaKabupatenModel;
-import com.example.ta_pam.responses.ProvinsiResponse;
 import com.example.ta_pam.responses.kotaKabupatenResponse;
 
 import retrofit2.Call;
