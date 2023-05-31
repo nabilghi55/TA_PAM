@@ -50,6 +50,11 @@ public class Login extends AppCompatActivity {
         });
 
     }
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Login.this, AyoMulai.class);
+        startActivity(intent);
+    }
 
     private void login() {
         String email = inputEmail.getText().toString();

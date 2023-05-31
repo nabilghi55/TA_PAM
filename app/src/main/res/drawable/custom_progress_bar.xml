@@ -1,0 +1,10 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/logo"
+        android:duration="400" />
+    <item
+        android:drawable="@drawable/logoo"
+        android:duration="400" />
+
+    <!-- Tambahkan item sesuai dengan jumlah frame yang diinginkan -->
+</animation-list>
