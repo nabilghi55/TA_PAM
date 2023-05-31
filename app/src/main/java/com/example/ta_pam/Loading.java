@@ -1,11 +1,8 @@
 package com.example.ta_pam;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-
 public class Loading extends AppCompatActivity {
 
     @Override

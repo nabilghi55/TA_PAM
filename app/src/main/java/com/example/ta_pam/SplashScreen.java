@@ -35,7 +35,7 @@ public class SplashScreen extends AppCompatActivity {
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(SplashScreen.this, Selamatdatang1.class); // Ganti dengan Activity tujuan Anda
+                        Intent intent = new Intent(SplashScreen.this, MainActivity.class); // Ganti dengan Activity tujuan Anda
                         startActivity(intent);
                         finish();
                     }
