@@ -1,4 +1,4 @@
-package com.example.ta_pam.adapters;
+package com.example.ta_pam.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,15 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ta_pam.R;
-import com.example.ta_pam.models.kotaKabupatenModel;
+import com.example.ta_pam.model.kotaKabupaten;
 
 import java.util.ArrayList;
 
 public class KotaKabupatenAdapter extends RecyclerView.Adapter<KotaKabupatenAdapter.KotaKabupatenViewHolder> {
 
-    private ArrayList<kotaKabupatenModel> kotaKabupatenArrayList;
+    private ArrayList<kotaKabupaten> kotaKabupatenArrayList;
 
-    public KotaKabupatenAdapter(ArrayList<kotaKabupatenModel> kotaKabupatenArrayList) {
+    public KotaKabupatenAdapter(ArrayList<kotaKabupaten> kotaKabupatenArrayList) {
         this.kotaKabupatenArrayList = kotaKabupatenArrayList;
     }
 
@@ -30,7 +30,7 @@ public class KotaKabupatenAdapter extends RecyclerView.Adapter<KotaKabupatenAdap
 
     @Override
     public void onBindViewHolder(@NonNull KotaKabupatenViewHolder holder, int position) {
-        kotaKabupatenModel kotaKabupaten = kotaKabupatenArrayList.get(position);
+        kotaKabupaten kotaKabupaten = kotaKabupatenArrayList.get(position);
         holder.textViewKotaKabupaten.setText(kotaKabupaten.getNama());
     }
 

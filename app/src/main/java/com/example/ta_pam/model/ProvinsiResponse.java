@@ -1,6 +1,4 @@
-package com.example.ta_pam.responses;
-
-import com.example.ta_pam.models.Provinsi;
+package com.example.ta_pam.model;
 
 import java.util.List;
 

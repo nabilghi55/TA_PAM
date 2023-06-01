@@ -1,6 +1,6 @@
-package com.example.ta_pam.models;
+package com.example.ta_pam.model;
 
-public class kotaKabupatenModel {
+public class kotaKabupaten {
 
     private String id;
     private String id_provinsi;

@@ -1,4 +1,4 @@
-package com.example.ta_pam.models;
+package com.example.ta_pam.model;
 
 public class Provinsi {
     private String id;

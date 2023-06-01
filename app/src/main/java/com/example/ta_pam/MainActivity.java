@@ -17,14 +17,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.ta_pam.adapters.ProvinsiAdapter;
-import com.example.ta_pam.adapters.KotaKabupatenAdapter;
+import com.example.ta_pam.adapter.ProvinsiAdapter;
+import com.example.ta_pam.adapter.KotaKabupatenAdapter;
 import com.example.ta_pam.api.ApiService;
 
 import com.example.ta_pam.auth.Login;
-import com.example.ta_pam.models.Provinsi;
-import com.example.ta_pam.models.kotaKabupatenModel;
-import com.example.ta_pam.responses.kotaKabupatenResponse;
+import com.example.ta_pam.model.Provinsi;
+import com.example.ta_pam.model.kotaKabupaten;
+import com.example.ta_pam.model.kotaKabupatenResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Provinsi> provinsiArrayList;
     private RecyclerView recyclerViewProvinsi;
     private ProvinsiAdapter provinsiAdapter;
-    private ArrayList<kotaKabupatenModel> kotaKabupatenArrayList;
+    private ArrayList<kotaKabupaten> kotaKabupatenArrayList;
     private RecyclerView recyclerViewkotaKabupaten;
     private KotaKabupatenAdapter KotaKabupatenAdapter;
 
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     kotaKabupatenResponse kotaKabupatenResponse = response.body();
                     if (kotaKabupatenResponse != null) {
-                        List<kotaKabupatenModel> kotaKabupatenList = kotaKabupatenResponse.getKotaKabupatenModelList();
+                        List<kotaKabupaten> kotaKabupatenList = kotaKabupatenResponse.getKotaKabupatenModelList();
                         if (kotaKabupatenList != null) {
                             kotaKabupatenArrayList.addAll(kotaKabupatenList);
                             KotaKabupatenAdapter.notifyDataSetChanged();

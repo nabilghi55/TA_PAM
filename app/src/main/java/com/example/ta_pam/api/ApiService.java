@@ -1,7 +1,7 @@
 package com.example.ta_pam.api;
 
-import com.example.ta_pam.responses.ProvinsiResponse;
-import com.example.ta_pam.responses.kotaKabupatenResponse;
+import com.example.ta_pam.model.ProvinsiResponse;
+import com.example.ta_pam.model.kotaKabupatenResponse;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
