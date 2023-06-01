@@ -8,7 +8,7 @@ public class Provinsi {
         return id;
     }
 
-    public String getNama() {
+    public String getNamaProvinsi() {
         return nama;
     }
 }

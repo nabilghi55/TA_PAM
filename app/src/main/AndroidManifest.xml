@@ -23,6 +23,9 @@
             android:name=".auth.Login"
             android:exported="false" />
         <activity
+            android:name=".wilayah.ProvinsiActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.Selamatdatang2"
             android:exported="false" />
         <activity

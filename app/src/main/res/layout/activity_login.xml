@@ -60,6 +60,7 @@
             android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:textColor="@color/black"
             android:hint="Masukkan password"
             android:background="@drawable/edit_text"
             android:inputType="textPassword" />

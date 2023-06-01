@@ -12,9 +12,10 @@ import com.example.ta_pam.model.Provinsi;
 import com.example.ta_pam.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProvinsiAdapter extends RecyclerView.Adapter<ProvinsiAdapter.ProvinsiViewHolder> {
-
+    private List<Provinsi> provinsiList;
     private ArrayList<Provinsi> provinsiArrayList;
 
     public ProvinsiAdapter(ArrayList<Provinsi> provinsiArrayList) {
@@ -31,12 +32,17 @@ public class ProvinsiAdapter extends RecyclerView.Adapter<ProvinsiAdapter.Provin
     @Override
     public void onBindViewHolder(@NonNull ProvinsiViewHolder holder, int position) {
         Provinsi provinsi = provinsiArrayList.get(position);
-        holder.textViewProvinsi.setText(provinsi.getNama());
+        holder.textViewProvinsi.setText(provinsi.getNamaProvinsi());
     }
 
     @Override
     public int getItemCount() {
         return provinsiArrayList.size();
+    }
+
+    public void setProvinsiList(List<Provinsi> provinsiList) {
+        this.provinsiList = provinsiList;
+        notifyDataSetChanged();
     }
 
     static class ProvinsiViewHolder extends RecyclerView.ViewHolder {

@@ -3,6 +3,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.ta_pam.wilayah.ProvinsiActivity;
+
 public class Loading extends AppCompatActivity {
 
     @Override
@@ -14,7 +17,7 @@ public class Loading extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Loading.this, MainActivity.class);
+                Intent intent = new Intent(Loading.this, ProvinsiActivity.class);
                 startActivity(intent);
                 finish();
             }
