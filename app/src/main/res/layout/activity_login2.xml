@@ -7,59 +7,41 @@
 
     <ImageView
         android:id="@+id/header_image"
-        android:layout_width="150dp"
-        android:layout_height="153dp"
+        android:layout_width="100dp"
+        android:layout_height="146.12dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/elang" />
+        android:layout_marginTop="40dp"
+        android:src="@drawable/backgroundtourguidelogin" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonTraveler"
+        android:id="@+id/buttonTourguide"
         android:layout_width="350dp"
         android:layout_height="35dp"
         android:layout_below="@+id/header_image"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="30.5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="30.5dp"
-        android:background="@drawable/buttontraveler"
+        android:background="@drawable/buttontourguide"
         android:gravity="center" />
 
     <LinearLayout
+        android:fontFamily="@font/manropebold"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/buttonTraveler"
-        android:padding="10dp">
+        android:layout_below="@+id/buttonTourguide"
+        android:padding="20dp">
 
         <TextView
+            android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Daftar"
+            android:text="Masuk"
             android:textSize="30dp"
             android:textStyle="bold"
-            android:fontFamily="@font/manropebold"
             android:textColor="@color/black"/>
-
-        <TextView
-            android:fontFamily="@font/manropebold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="5dp"
-            android:textColor="@color/black"/>
-
-        <EditText
-            android:paddingStart="20dp"
-            android:id="@+id/edit_username"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:hint="Masukkan username"
-            android:background="@drawable/edit_text"/>
-
         <TextView
             android:fontFamily="@font/manropebold"
             android:layout_width="wrap_content"
@@ -69,12 +51,12 @@
             android:textColor="@color/black"/>
 
         <EditText
+            android:layout_marginTop="10dp"
             android:paddingStart="20dp"
-            android:id="@+id/edit_email"
+            android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Masukkan email"
-            android:layout_marginTop="10dp"
             android:background="@drawable/edit_text"/>
 
         <TextView
@@ -88,50 +70,23 @@
         <EditText
             android:layout_marginTop="10dp"
             android:paddingStart="20dp"
-            android:id="@+id/edit_password"
+            android:id="@+id/login_password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:textColor="@color/black"
             android:hint="Masukkan password"
             android:background="@drawable/edit_text"
             android:inputType="textPassword" />
 
-        <TextView
-            android:fontFamily="@font/manropebold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nomor Telepon"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black"/>
-
-        <EditText
-            android:layout_marginTop="10dp"
-            android:paddingStart="20dp"
-            android:id="@+id/edit_telepon"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Masukkan nomor telepon"
-            android:background="@drawable/edit_text"/>
-
-<!--        <CheckBox-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:layout_marginBottom="5dp"-->
-<!--            android:id="@+id/checkbox_agreement"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Dengan mendaftar, Anda menyetujui Syarat &amp; Ketentuan dan Kebijakan Privasi" />-->
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_marginTop="20dp"
-            android:id="@+id/btn_daftar"
-            android:fontFamily="@font/manropebold"
+            android:id="@+id/btn_login"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:background="@drawable/button_background"
-            android:text="Daftar" />
-
-
-
+            android:text="Masuk" />
         <LinearLayout
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -140,21 +95,21 @@
             android:orientation="horizontal">
 
             <TextView
-                android:fontFamily="@font/manropebold"
+                android:fontFamily="@font/manropereg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sudah mempunyai akun?" />
+                android:text="Belum Punya Akun?" />
 
             <TextView
-                android:fontFamily="@font/manropebold"
                 android:id="@+id/text_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
-                android:text="Masuk"
+                android:text="Daftar"
                 android:layout_marginLeft="5dp"
                 android:textColor="@color/blue_200"/>
         </LinearLayout>
+
 
     </LinearLayout>
 </RelativeLayout>

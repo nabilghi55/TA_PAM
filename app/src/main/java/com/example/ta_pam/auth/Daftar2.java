@@ -17,17 +17,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class Daftar extends AppCompatActivity {
+public class Daftar2 extends AppCompatActivity {
     EditText inputUsername, inputEmail, inputPassword, inputNoTel;
     String username, email, password, noTel;
-    Button btn_daftar, buttonTraveler;
+    Button btn_daftar, buttonTourguide;
     FirebaseAuth mAuth;
     TextView text_Masuk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_daftar);
+        setContentView(R.layout.activity_daftar2);
 
         inputUsername = findViewById(R.id.edit_username);
         inputEmail = findViewById(R.id.edit_email);
@@ -35,21 +35,21 @@ public class Daftar extends AppCompatActivity {
         inputNoTel = findViewById(R.id.edit_telepon);
         btn_daftar = findViewById(R.id.btn_daftar);
         text_Masuk = findViewById(R.id.text_masuk);
-        buttonTraveler = findViewById(R.id.buttonTraveler);
+        buttonTourguide = findViewById(R.id.buttonTourguide);
         mAuth = FirebaseAuth.getInstance();
 
         text_Masuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Daftar.this, Login.class);
+                Intent intent = new Intent(Daftar2.this, Login.class);
                 startActivity(intent);
             }
         });
 
-        buttonTraveler.setOnClickListener(new View.OnClickListener(){
+        buttonTourguide.setOnClickListener(new View.OnClickListener(){
            @Override
            public void onClick (View view){
-               Intent intent = new Intent(Daftar.this, Daftar2.class);
+               Intent intent = new Intent(Daftar2.this, Daftar.class);
                startActivity(intent);
 
            }
@@ -75,15 +75,15 @@ public class Daftar extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Daftar.this, "Registrasi Berhasil", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Daftar2.this, "Registrasi Berhasil", Toast.LENGTH_LONG).show();
                              inputNoTel.getText().clear();
                              inputPassword.getText().clear();
                              inputEmail.getText().clear();
                              inputUsername.getText().clear();
-                            Intent intent = new Intent(Daftar.this, Login.class);
+                            Intent intent = new Intent(Daftar2.this, Login.class);
                             startActivity(intent);
                         } else {
-                            Toast.makeText(Daftar.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Daftar2.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();
                         }
                     }
                 });

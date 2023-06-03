@@ -13,12 +13,25 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/fotoorang" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonTraveler"
+        android:layout_width="350dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/header_image"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="30.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30.5dp"
+        android:background="@drawable/buttontraveler"
+        android:gravity="center" />
+
     <LinearLayout
         android:fontFamily="@font/manropebold"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/header_image"
+        android:layout_below="@+id/buttonTraveler"
         android:padding="16dp">
 
         <TextView
