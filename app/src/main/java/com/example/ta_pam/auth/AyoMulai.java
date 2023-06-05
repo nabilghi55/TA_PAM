@@ -34,7 +34,7 @@ public class AyoMulai extends AppCompatActivity {
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AyoMulai.this, Login.class);
+                Intent intent = new Intent(AyoMulai.this, MainActivity.class);
                 startActivity(intent);
             }
         });

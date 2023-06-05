@@ -32,7 +32,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ProvinsiActivity extends AppCompatActivity {
+public class ProvinsiActivity extends AppCompatActivity implements  ProvinsiAdapter.ProvinsiClickListener {
     private ArrayList<Provinsi> provinsiArrayList;
     private RecyclerView recyclerViewProvinsi;
     private ProvinsiAdapter provinsiAdapter;
@@ -85,6 +85,8 @@ public class ProvinsiActivity extends AppCompatActivity {
                             provinsiArrayList.addAll(provinsiList);
                             filterProvinsi(textSearch.getText().toString().trim());
                             provinsiAdapter.notifyDataSetChanged();
+                            provinsiAdapter.setOnProvinsiClickListener(ProvinsiActivity.this);
+
                         } else {
                             // Handle jika provinsiList bernilai null
                             Log.e(TAG, "onResponse: Provinsi List Null");
@@ -151,5 +153,12 @@ public class ProvinsiActivity extends AppCompatActivity {
         Toast.makeText(ProvinsiActivity.this, "Logout Berhasil", Toast.LENGTH_SHORT).show();
         startActivity(intent);
         finish();
+
+    }
+    public void onProvinsiClick(Provinsi provinsi) {
+        Intent namaProvinsi = new Intent(ProvinsiActivity.this, KotaKabupatenActivity.class);
+        namaProvinsi.putExtra("id",provinsi.getId().toString());
+        namaProvinsi.putExtra("nama",provinsi.getNamaProvinsi());
+        startActivity(namaProvinsi);
     }
 }

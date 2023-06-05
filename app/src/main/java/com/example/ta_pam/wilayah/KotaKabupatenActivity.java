@@ -51,6 +51,7 @@ public class KotaKabupatenActivity extends AppCompatActivity {
     private String inputText;
     String hasil;
     String id_provinsi, getId_provinsi;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +104,11 @@ public class KotaKabupatenActivity extends AppCompatActivity {
 
 
         });
-        String id_prov = getInputText();
+        String id_prov = getIntent().getExtras().getString("id");
+        String nama_prov = getIntent().getExtras().getString("nama");
 
 
-        ApiService.service.getkotaKabupaten("13").enqueue(new Callback<kotaKabupatenResponse>() {
+        ApiService.service.getkotaKabupaten(id_prov).enqueue(new Callback<kotaKabupatenResponse>() {
             @Override
             public void onResponse(Call<kotaKabupatenResponse> call, Response<kotaKabupatenResponse> response) {
                 if (response.isSuccessful()) {
@@ -116,6 +118,7 @@ public class KotaKabupatenActivity extends AppCompatActivity {
                         if (kotaKabupatenList != null) {
                             kotaKabupatenArrayList.addAll(kotaKabupatenList);
                             KotaKabupatenAdapter.notifyDataSetChanged();
+
                         } else {
                             // Handle jika kotaKabupatenList bernilai null
                             Log.e(TAG, "onResponse: kosong" + response.body());
@@ -165,20 +168,20 @@ public class KotaKabupatenActivity extends AppCompatActivity {
         return inputText;
     }
 
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Konfirmasi Logout")
-                .setMessage("Apakah Anda ingin logout?")
-                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        logout();
-                    }
-                })
-                .setNegativeButton("Tidak", null)
-                .show();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        new AlertDialog.Builder(this)
+//                .setTitle("Konfirmasi Logout")
+//                .setMessage("Apakah Anda ingin logout?")
+//                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        logout();
+//                    }
+//                })
+//                .setNegativeButton("Tidak", null)
+//                .show();
+//    }
 
     private void logout() {
         Intent intent = new Intent(KotaKabupatenActivity.this, Login.class);

@@ -21,6 +21,13 @@ public class ProvinsiAdapter extends RecyclerView.Adapter<ProvinsiAdapter.Provin
     public ProvinsiAdapter(ArrayList<Provinsi> provinsiArrayList) {
         this.provinsiArrayList = provinsiArrayList;
     }
+    public interface ProvinsiClickListener {
+        void onProvinsiClick(Provinsi provinsi);
+    }
+    private ProvinsiClickListener provinsiClickListener;
+    public void setOnProvinsiClickListener(ProvinsiClickListener clickListener) {
+        this.provinsiClickListener = clickListener;
+    }
 
     @NonNull
     @Override
@@ -33,6 +40,15 @@ public class ProvinsiAdapter extends RecyclerView.Adapter<ProvinsiAdapter.Provin
     public void onBindViewHolder(@NonNull ProvinsiViewHolder holder, int position) {
         Provinsi provinsi = provinsiArrayList.get(position);
         holder.textViewProvinsi.setText(provinsi.getNamaProvinsi());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (provinsiClickListener != null) {
+                    provinsiClickListener.onProvinsiClick(provinsi);
+                }
+            }
+        });
     }
 
     @Override
