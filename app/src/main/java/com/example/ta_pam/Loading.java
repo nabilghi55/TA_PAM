@@ -1,10 +1,10 @@
 package com.example.ta_pam;
-import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.ta_pam.wilayah.ProvinsiActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Loading extends AppCompatActivity {
 
@@ -18,6 +18,7 @@ public class Loading extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(Loading.this, MainActivity.class);
+
                 startActivity(intent);
                 finish();
             }

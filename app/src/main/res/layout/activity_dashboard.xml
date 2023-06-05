@@ -6,7 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashboardActivity">
-
+    <TextView
+        android:fontFamily="@font/manropebold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:id="@+id/nama"/>
+    <TextView
+        android:fontFamily="@font/manropebold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/nama"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/abu"
+        android:text="LOCATION"
+        android:textSize="20dp"
+        android:id="@+id/lokasi"/>
+    <TextView
+        android:fontFamily="@font/manropebold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/lokasi"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:id="@+id/teksLokasi"/>
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
         android:layout_width="323dp"
@@ -14,7 +44,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="46dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/teksLokasi"
         android:layout_marginEnd="46dp"
         android:background="@drawable/search_border"
         android:focusable="false"
@@ -36,7 +67,7 @@
         android:layout_marginTop="20dp"
         android:layout_below="@id/beach"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/recyclerView"
         android:scrollbars="vertical"/>
 

@@ -81,6 +81,7 @@ public class Daftar extends AppCompatActivity {
                              inputEmail.getText().clear();
                              inputUsername.getText().clear();
                             Intent intent = new Intent(Daftar.this, Login.class);
+                            intent.putExtra("nama", username);
                             startActivity(intent);
                         } else {
                             Toast.makeText(Daftar.this, "Registrasi Gagal", Toast.LENGTH_LONG).show();

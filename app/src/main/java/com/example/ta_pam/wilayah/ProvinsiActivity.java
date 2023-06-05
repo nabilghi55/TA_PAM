@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ta_pam.DashboardActivity;
 import com.example.ta_pam.R;
 import com.example.ta_pam.adapter.ProvinsiAdapter;
 import com.example.ta_pam.api.ApiService;
@@ -39,7 +38,7 @@ public class ProvinsiActivity extends AppCompatActivity implements  ProvinsiAdap
     private ArrayList<Provinsi> filteredProvinsiArrayList;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_provinsi);
 
@@ -156,7 +155,7 @@ public class ProvinsiActivity extends AppCompatActivity implements  ProvinsiAdap
 
     }
     public void onProvinsiClick(Provinsi provinsi) {
-        Intent namaProvinsi = new Intent(ProvinsiActivity.this, KotaKabupatenActivity.class);
+        Intent namaProvinsi = new Intent(ProvinsiActivity.this, DashboardActivity.class);
         namaProvinsi.putExtra("id",provinsi.getId().toString());
         namaProvinsi.putExtra("nama",provinsi.getNamaProvinsi());
         startActivity(namaProvinsi);

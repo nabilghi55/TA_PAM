@@ -1,12 +1,11 @@
 package com.example.ta_pam;
 
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-
-import com.example.ta_pam.database.Database;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,7 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ta_pam.adapter.MyAdapter;
 import com.example.ta_pam.database.Database;
+import com.example.ta_pam.wilayah.KotaKabupatenActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +37,10 @@ public class DashboardActivity extends AppCompatActivity {
     List<Database> dataList;
     MyAdapter adapter;
     SearchView searchView;
+    TextView namaUser;
+    TextView namaLokasi;
+    FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +51,8 @@ public class DashboardActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         searchView = findViewById(R.id.search);
         searchView.clearFocus();
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(DashboardActivity.this, 1);
+        namaLokasi = findViewById(R.id.teksLokasi);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(DashboardActivity.this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(DashboardActivity.this);
@@ -59,7 +65,22 @@ public class DashboardActivity extends AppCompatActivity {
 
         adapter = new MyAdapter(DashboardActivity.this, dataList);
         recyclerView.setAdapter(adapter);
+        if (firebaseUser != null) {
+            String namaPengguna = firebaseUser.getDisplayName();
+            if (namaPengguna != null) {
+                // Lakukan sesuatu dengan nama pengguna
+                System.out.println(namaPengguna);
+            }
+            // Gunakan nilai namaPengguna untuk menampilkan nama pengguna di TextView atau komponen tampilan lainnya.
+            TextView textViewNamaPengguna = findViewById(R.id.nama);
+            textViewNamaPengguna.setText("Welcome, "+firebaseUser.getEmail().substring(0,5));
+        }else{
+            Log.d("Debug_gagal", "Data: " + namaUser);
+        }
 
+        KotaKabupatenActivity kotaKabupatenActivity = new KotaKabupatenActivity();
+        String lokasi = getIntent().getExtras().getString("nama");
+        namaLokasi.setText(lokasi);
         databaseReference = FirebaseDatabase.getInstance().getReference("Antara Application");
         dialog.show();
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {

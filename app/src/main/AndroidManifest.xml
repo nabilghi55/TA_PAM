@@ -22,10 +22,10 @@
 
         <activity
             android:name=".UploadActivity"
-            android:exported="true"/>
+            android:exported="false"/>
         <activity
             android:name=".DashboardActivity"
-            android:exported="true"/>
+            android:exported="false"/>
         <activity
             android:name=".Loading"
             android:exported="false" />
