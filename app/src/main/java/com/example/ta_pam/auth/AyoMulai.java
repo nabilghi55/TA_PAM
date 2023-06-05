@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.ta_pam.DashboardActivity;
 import com.example.ta_pam.MainActivity;
 import com.example.ta_pam.R;
 import com.example.ta_pam.wilayah.ProvinsiActivity;
@@ -34,7 +35,7 @@ public class AyoMulai extends AppCompatActivity {
         btn_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AyoMulai.this, MainActivity.class);
+                Intent intent = new Intent(AyoMulai.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
