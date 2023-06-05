@@ -18,9 +18,9 @@ public class Loading extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(Loading.this, MainActivity.class);
-
+                intent.putExtra("key", "thisloading");
                 startActivity(intent);
-                finish();
+               ;
             }
         }, 2000);
     }
