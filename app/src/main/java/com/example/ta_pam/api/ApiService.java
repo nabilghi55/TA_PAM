@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 
 public interface ApiService {
@@ -22,8 +23,8 @@ public interface ApiService {
     @GET("daerahindonesia/provinsi")
     Call<ProvinsiResponse> getProvinsi();
 
-    @GET("daerahindonesia/kota?id_provinsi=32")
-    Call<kotaKabupatenResponse> getkotaKabupaten();
+    @GET("daerahindonesia/kota")
+    Call<kotaKabupatenResponse> getkotaKabupaten(@Query("id_provinsi") String id_provinsi);
 
 
 }

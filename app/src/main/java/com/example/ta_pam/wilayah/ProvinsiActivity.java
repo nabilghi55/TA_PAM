@@ -6,6 +6,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,21 +50,29 @@ public class ProvinsiActivity extends AppCompatActivity {
         recyclerViewProvinsi.setLayoutManager(layoutManager);
         recyclerViewProvinsi.setAdapter(provinsiAdapter);
 
-        Button btn_cari;
         EditText textSearch;
         textSearch = findViewById(R.id.editTextSearch);
-        btn_cari = findViewById(R.id.btn_cari);
 
         filteredProvinsiArrayList = new ArrayList<>();
-
-        btn_cari.setOnClickListener(new View.OnClickListener() {
+        textSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View view) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String query = textSearch.getText().toString().trim();
                 filterProvinsi(query);
                 provinsiAdapter.notifyDataSetChanged();
             }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
         });
+
 
         ApiService.service.getProvinsi().enqueue(new Callback<ProvinsiResponse>() {
             @Override

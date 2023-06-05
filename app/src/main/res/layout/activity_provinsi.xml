@@ -18,15 +18,7 @@
             android:padding="8dp"
             android:textColorHint="#808080" />
 
-        <Button
-            android:id="@+id/btn_cari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cari"
-            android:background="@drawable/button_background"
-            android:textColor="#FFFFFF"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+
 
     </LinearLayout>
 

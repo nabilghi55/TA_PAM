@@ -3,7 +3,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
+        <EditText
+            android:id="@+id/cariid"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Masukkan id provinsi"
+            android:padding="8dp"
+            android:textColorHint="#808080" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_cariID"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Masuk"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp" />-->
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,24 +38,24 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:hint="Cari Provinsi"
+            android:hint="Cari Kota / Kabupaten"
             android:padding="8dp"
             android:textColorHint="#808080" />
 
-        <Button
-            android:id="@+id/btn_cari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cari"
-            android:background="@drawable/button_background"
-            android:textColor="#FFFFFF"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_cari"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cari"-->
+<!--            android:background="@drawable/button_background"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:paddingStart="16dp"-->
+<!--            android:paddingEnd="16dp" />-->
 
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewProvinsi"
+        android:id="@+id/recyclerViewkotaKabupaten"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
