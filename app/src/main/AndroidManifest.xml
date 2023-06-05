@@ -20,6 +20,9 @@
             android:name=".SplashScreen"
             android:exported="false" />
         <activity
+            android:name=".auth.Login2"
+            android:exported="false" />
+        <activity
             android:name=".auth.Login"
             android:exported="false" />
         <activity
@@ -33,6 +36,9 @@
             android:exported="false" />
         <activity
             android:name=".auth.Selamatdatang1"
+            android:exported="false" />
+        <activity
+            android:name=".auth.Daftar2"
             android:exported="false" />
         <activity
             android:name=".auth.Daftar"
