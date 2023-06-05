@@ -14,13 +14,15 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.ta_pam.DetailActivity;
 import com.example.ta_pam.R;
 import com.example.ta_pam.database.Database;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class
+MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
     private Context context;
     private List<Database> dataList;
@@ -43,18 +45,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.recTitle.setText(dataList.get(position).getDataJudul());
         holder.recPrice.setText(dataList.get(position).getDataHarga());
 
-//        holder.recCard.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, DetailActivity.class);
-//                intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
-//                intent.putExtra("Description", dataList.get(holder.getAdapterPosition()).getDataDesc());
-//                intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataTitle());
-//                intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
-//                intent.putExtra("Language", dataList.get(holder.getAdapterPosition()).getDataLang());
-//                context.startActivity(intent);
-//            }
-//        });
+        holder.recCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
+                intent.putExtra("Price", dataList.get(holder.getAdapterPosition()).getDataHarga());
+                intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataJudul());
+                intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

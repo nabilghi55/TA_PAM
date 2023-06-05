@@ -36,7 +36,6 @@ public class DashboardActivity extends AppCompatActivity {
     MyAdapter adapter;
     SearchView searchView;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +60,7 @@ public class DashboardActivity extends AppCompatActivity {
         adapter = new MyAdapter(DashboardActivity.this, dataList);
         recyclerView.setAdapter(adapter);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Antara Apk");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Antara Application");
         dialog.show();
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
