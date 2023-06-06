@@ -11,5 +11,7 @@
     <color name="blue_100">#E5F5FF</color>
     <color name="biru">#0067A1</color>
     <color name="abu">#7A7A7A</color>
+    <color name="red">#c70000</color>
+    <color name="green">#00ff00</color>
 
 </resources>
