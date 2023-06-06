@@ -93,7 +93,7 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveData();
-                Intent intent = new Intent(UpdateActivity.this, MainActivity.class);
+                Intent intent = new Intent(UpdateActivity.this, DashboardActivity.class);
                 startActivity(intent);
             }
         });
