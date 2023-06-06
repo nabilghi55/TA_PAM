@@ -57,7 +57,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(DashboardActivity.this);
         builder.setCancelable(false);
-        builder.setView(R.layout.activity_loading);
+        builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
         dialog.show();
 
