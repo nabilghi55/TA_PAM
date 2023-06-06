@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -41,12 +42,13 @@ public class DashboardActivity extends AppCompatActivity {
     TextView namaLokasi;
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+    Button beach;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
+        beach = findViewById(R.id.beach);
         recyclerView = findViewById(R.id.recyclerView);
         fab = findViewById(R.id.fab);
         searchView = findViewById(R.id.search);
@@ -60,6 +62,15 @@ public class DashboardActivity extends AppCompatActivity {
         builder.setView(R.layout.progress_layout);
         AlertDialog dialog = builder.create();
         dialog.show();
+        beach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String pantai = "Pantai";
+                searchView.setQuery(pantai,false);
+
+
+            }
+        });
 
         dataList = new ArrayList<>();
 
