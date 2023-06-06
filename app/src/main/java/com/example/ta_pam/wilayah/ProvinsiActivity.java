@@ -64,6 +64,7 @@ public class ProvinsiActivity extends AppCompatActivity implements  ProvinsiAdap
                 String query = textSearch.getText().toString().trim();
                 filterProvinsi(query);
                 provinsiAdapter.notifyDataSetChanged();
+                provinsiAdapter.setOnProvinsiClickListener(ProvinsiActivity.this);
             }
 
             @Override
