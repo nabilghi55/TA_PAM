@@ -44,6 +44,7 @@ MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         Glide.with(context).load(dataList.get(position).getDataImage()).into(holder.recImage);
         holder.recTitle.setText(dataList.get(position).getDataJudul());
         holder.recPrice.setText(dataList.get(position).getDataHarga());
+        holder.recProvinsi.setText(dataList.get(position).getDataProvinsi());
 
         holder.recCard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,7 @@ MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
                 intent.putExtra("Image", dataList.get(holder.getAdapterPosition()).getDataImage());
                 intent.putExtra("Price", dataList.get(holder.getAdapterPosition()).getDataHarga());
                 intent.putExtra("Title", dataList.get(holder.getAdapterPosition()).getDataJudul());
+                intent.putExtra("Provinsi", dataList.get(holder.getAdapterPosition()).getDataProvinsi());
                 intent.putExtra("Key",dataList.get(holder.getAdapterPosition()).getKey());
                 context.startActivity(intent);
             }
@@ -72,7 +74,7 @@ MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 class MyViewHolder extends RecyclerView.ViewHolder{
 
     ImageView recImage;
-    TextView recTitle, recPrice;
+    TextView recTitle, recPrice, recProvinsi;
     CardView recCard;
 
     public MyViewHolder(@NonNull View itemView) {
@@ -82,5 +84,6 @@ class MyViewHolder extends RecyclerView.ViewHolder{
         recCard = itemView.findViewById(R.id.recCard);
         recPrice = itemView.findViewById(R.id.recPrice);
         recTitle = itemView.findViewById(R.id.recTitle);
+        recProvinsi = itemView.findViewById(R.id.recProvinsi);
     }
 }

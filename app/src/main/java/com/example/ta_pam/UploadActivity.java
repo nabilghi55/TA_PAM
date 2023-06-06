@@ -1,6 +1,7 @@
 package com.example.ta_pam;
 
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -36,10 +37,11 @@ public class UploadActivity extends AppCompatActivity {
 
     ImageView uploadImage;
     Button saveButton;
-    EditText uploadJudul, uploadHarga;
+    EditText uploadJudul, uploadHarga, uploadProvinsi;
     String imageURL;
     Uri uri;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +50,7 @@ public class UploadActivity extends AppCompatActivity {
         uploadImage = findViewById(R.id.uploadImage);
         uploadHarga = findViewById(R.id.uploadHarga);
         uploadJudul = findViewById(R.id.uploadJudul);
-//        uploadLang = findViewById(R.id.uploadLang);
+        uploadProvinsi = findViewById(R.id.uploadProvinsi);
         saveButton = findViewById(R.id.saveButton);
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
@@ -117,9 +119,9 @@ public class UploadActivity extends AppCompatActivity {
 
         String title = uploadJudul.getText().toString();
         String price = uploadHarga.getText().toString();
-//        String lang = uploadLang.getText().toString();
+        String provinsi = uploadProvinsi.getText().toString();
 
-        Database dataClass = new Database(title, price, imageURL);
+        Database dataClass = new Database(title, price ,imageURL,provinsi );
 
         //We are changing the child from title to currentDate,
         // because we will be updating title as well and it may affect child value.

@@ -20,13 +20,12 @@ import com.google.firebase.storage.StorageReference;
 
 public class DetailActivity extends AppCompatActivity {
 
-    TextView detailPrice, detailTitle;
+    TextView detailPrice, detailTitle, detailProvinsi;
     ImageView detailImage;
     FloatingActionButton deleteButton, editButton;
     String key = "";
     String imageUrl = "";
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +36,13 @@ public class DetailActivity extends AppCompatActivity {
         detailTitle = findViewById(R.id.detailTitle);
         deleteButton = findViewById(R.id.deleteButton);
         editButton = findViewById(R.id.editButton);
+        detailProvinsi = findViewById(R.id.detailProvinsi);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null){
             detailPrice.setText(bundle.getString("Price"));
             detailTitle.setText(bundle.getString("Title"));
+            detailProvinsi.setText(bundle.getString("Provinsi"));
             key = bundle.getString("Key");
             imageUrl = bundle.getString("Image");
             Glide.with(this).load(bundle.getString("Image")).into(detailImage);
@@ -70,6 +71,7 @@ public class DetailActivity extends AppCompatActivity {
                        Intent intent = new Intent(DetailActivity.this, UpdateActivity.class)
                         .putExtra("Title", detailTitle.getText().toString())
                         .putExtra("Harga", detailPrice.getText().toString())
+                        .putExtra("Provinsi", detailProvinsi.getText().toString())
                         .putExtra("Image", imageUrl)
                         .putExtra("Key", key);
                 startActivity(intent);

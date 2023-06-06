@@ -42,11 +42,21 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_below="@id/recTitle"
-            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:text="Price"
             android:textColor="@color/white"
             android:layout_centerHorizontal="true"
             android:textSize="16sp" />
+        <TextView
+            android:id="@+id/recProvinsi"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/recPrice"
+            android:layout_marginTop="10dp"
+            android:text="Provinsi"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="11sp" />
 
     </RelativeLayout>
 

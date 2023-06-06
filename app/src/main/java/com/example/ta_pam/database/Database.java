@@ -4,6 +4,7 @@ public class Database {
 
     private String dataJudul;
     private String dataHarga;
+    private String dataProvinsi;
     private String dataImage;
     private String key;
 
@@ -16,20 +17,22 @@ public class Database {
     public String getDataJudul() {
         return dataJudul;
     }
+    public String getDataProvinsi() {
+        return dataProvinsi;
+    }
 
     public String getDataHarga() {
         return dataHarga;
     }
 
-
     public String getDataImage() {
         return dataImage;
     }
 
-    public Database(String dataJudul, String dataHarga, String dataImage) {
+    public Database(String dataJudul, String dataHarga, String dataImage, String dataProvinsi) {
         this.dataJudul = dataJudul;
         this.dataHarga = dataHarga;
-//        this.dataLang = dataLang;
+        this.dataProvinsi = dataProvinsi;
         this.dataImage = dataImage;
     }
     public Database(){

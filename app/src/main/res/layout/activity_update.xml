@@ -63,6 +63,17 @@
                 android:gravity="start|center_vertical"
                 android:textColor="@color/biru"/>
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/updateProvinsi"
+                android:background="@drawable/search_border"
+                android:layout_marginTop="20dp"
+                android:padding="16dp"
+                android:hint="Provinsi"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/biru"/>
+
 
 
             <Button

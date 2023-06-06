@@ -35,8 +35,8 @@ public class UpdateActivity extends AppCompatActivity {
 
     ImageView updateImage;
     Button updateButton;
-    EditText updatePrice, updateTitle ;
-    String title, price;
+    EditText updatePrice, updateTitle, updateProvinsi ;
+    String title, price, provinsi;
     String imageUrl;
     String key, oldImageURL;
     Uri uri;
@@ -52,10 +52,11 @@ public class UpdateActivity extends AppCompatActivity {
         updatePrice = findViewById(R.id.updatePrice);
         updateImage = findViewById(R.id.updateImage);
         updateTitle = findViewById(R.id.updateTitle);
+        updateProvinsi = findViewById(R.id.updateProvinsi);
+
 
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                new ActivityResultCallback<ActivityResult>() {
+                new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK){
@@ -73,6 +74,8 @@ public class UpdateActivity extends AppCompatActivity {
             Glide.with(UpdateActivity.this).load(bundle.getString("Image")).into(updateImage);
             updateTitle.setText(bundle.getString("Title"));
             updatePrice.setText(bundle.getString("Price"));
+            updateProvinsi.setText(bundle.getString("Provinsi"));
+
             key = bundle.getString("Key");
             oldImageURL = bundle.getString("Image");
         }
@@ -124,8 +127,9 @@ public class UpdateActivity extends AppCompatActivity {
     public void updateData(){
         title = updateTitle.getText().toString().trim();
         price = updatePrice.getText().toString().trim();
+        provinsi = updateProvinsi.getText().toString().trim();
 
-        Database dataClass = new Database(title, price, imageUrl);
+        Database dataClass = new Database(title, price,imageUrl, provinsi);
 
         databaseReference.setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
